@@ -10,13 +10,13 @@
     @foreach ($asignaturas as $asignatura)
     <!-- Mostrar los cursos dentro de una lista-->
     <li>
-
+        <a href="{{ route('asignaturas.buscar', $asignatura->id ) }}">
             {{$asignatura->nombre}}
-
+        </a>
     </li>
     @endforeach
 </ul>
 
-
+<a href="{{ route('asignaturas.insertar') }}"> Insertar nueva Asignatura </a>
 @endsection
 

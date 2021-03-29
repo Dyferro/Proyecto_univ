@@ -18,3 +18,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class,'home'])->name('home');
 
 Route::get('asignaturas',[AsignaturaController::class, 'mostrar'])->name('asignaturas.listado');
+
+Route::get('asignaturas/insertar', [AsignaturaController::class, 'insertar'])->name('asignaturas.insertar');
+
+Route::post('insertar', [AsignaturaController::class, 'guardar'])->name('asignaturas.guardar');
+
+Route::get('buscar/{id}', [AsignaturaController::class, 'buscar'])->name('asignaturas.buscar');
+
+Route::get('asignaturas/{asignatura}/modificar', [AsignaturaController::class, 'modificar'])->name('asignaturas.modificar');
+
+Route::put('modificar/{asignatura}', [AsignaturaController::class, 'guardar_modificacion'])->name('asignaturas.guardarm');
+
+Route::get('asignaturas/{asignatura}/eliminar',[AsignaturaController::class, 'eliminar'])->name('asignaturas.eliminar');
