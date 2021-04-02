@@ -10,7 +10,7 @@
     @foreach ($asignaturas as $asignatura)
     <!-- Mostrar los cursos dentro de una lista-->
     <li>
-        <a href="{{ route('asignaturas.buscar', $asignatura->id ) }}">
+        <a href="{{ route('asignaturas.buscar', $asignatura) }}">
             {{$asignatura->nombre}}
         </a>
     </li>

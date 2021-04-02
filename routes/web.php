@@ -23,10 +23,10 @@ Route::get('asignaturas/insertar', [AsignaturaController::class, 'insertar'])->n
 
 Route::post('insertar', [AsignaturaController::class, 'guardar'])->name('asignaturas.guardar');
 
-Route::get('buscar/{id}', [AsignaturaController::class, 'buscar'])->name('asignaturas.buscar');
+Route::get('buscar/{asignatura}', [AsignaturaController::class, 'buscar'])->name('asignaturas.buscar');
 
 Route::get('asignaturas/{asignatura}/modificar', [AsignaturaController::class, 'modificar'])->name('asignaturas.modificar');
 
 Route::put('modificar/{asignatura}', [AsignaturaController::class, 'guardar_modificacion'])->name('asignaturas.guardarm');
 
-Route::get('asignaturas/{asignatura}/eliminar',[AsignaturaController::class, 'eliminar'])->name('asignaturas.eliminar');
+Route::delete('asignaturas/{asignatura}/eliminar',[AsignaturaController::class, 'eliminar'])->name('asignaturas.eliminar');

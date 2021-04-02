@@ -16,5 +16,12 @@
 <br/>
 <a href="{{ route('asignaturas.modificar', $asignatura ) }}"> Modificar </a>
 <br/>
-<a href="{{ route('asignaturas.eliminar', $asignatura ) }}"> Eliminar </a>
+<form action="{{ route('asignaturas.eliminar', $asignatura ) }}" method="POST">
+    @csrf
+    @method('delete')
+    <button type="submit">
+        Eliminar
+    </button>
+</form>
+
 @endsection
