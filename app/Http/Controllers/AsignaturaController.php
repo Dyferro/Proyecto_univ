@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class AsignaturaController extends Controller
 {
     //
-    public function mostrar(){
+    public function mostrar()
+    {
         $asignaturas = Asignatura::all();
         return view('asignaturas.listado_asignatura', compact('asignaturas'));
     }
