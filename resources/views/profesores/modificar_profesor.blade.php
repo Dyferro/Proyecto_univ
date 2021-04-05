@@ -1,16 +1,17 @@
 @extends('layout.layout')
 
-@section('title','Insertar Profesor')
+@section('title','Modificar Profesor')
 
 @section('content')
-<h1> Insertar Profesor</h1>
+<h1> Modificar Profesor</h1>
 
 <!-- Formulario -->
-<form action="{{route('profesors.guardar')}}" method="POST">
+<form action="{{route('profesors.guardarm', $profesor)}}" method="POST">
     @csrf
+    @method('put')  <!-- Directiva que indica enviar el formulario como un put-->
 
     <label>Nombre completo : </label>
-    <input type="text" name="nombre" value="{{old('nombre')}}">
+    <input type="text" name="nombre" value="{{old('nombre',$profesor->nombre)}}">
     @error('nombre')
         <br/>
         *{{$message}}
@@ -18,7 +19,7 @@
     @enderror
     <br/>
     <label>Dirección : </label>
-    <input type="text" name="direccion" value="{{old('direccion')}}">
+    <input type="text" name="direccion" value="{{old('direccion', $profesor->direccion)}}">
     @error('direccion')
         <br/>
         *{{$message}}
@@ -26,7 +27,7 @@
     @enderror
     <br/>
     <label>Asignatura : </label>
-    <input type="text" name="asignatura" value="{{old('asignatura')}}">
+    <input type="text" name="asignatura" value="{{old('asignatura',  $profesor->asignatura)}}">
     @error('asignatura')
         <br/>
         *{{$message}}
@@ -34,7 +35,7 @@
     @enderror
     <br/>
     <label>Catedra : </label>
-    <input type="text" name="catedra" value="{{old('catedra')}}">
+    <input type="text" name="catedra" value="{{old('catedra',  $profesor->catedra)}}">
     @error('catedra')
         <br/>
         *{{$message}}
@@ -42,7 +43,7 @@
     @enderror
     <br/>
     <label>Edad: </label>
-    <input type="number" name="edad" value="{{old('edad')}}">
+    <input type="number" name="edad" value="{{old('edad',  $profesor->edad)}}">
     @error('edad')
         <br/>
         *{{$message}}
@@ -50,7 +51,7 @@
     @enderror
     <br/>
     <br/>
-    <button type="submit">Insertar</button>
+    <button type="submit">Modificar</button>
 </form>
 
 @endsection

@@ -7,7 +7,9 @@
 <ul>
     @foreach ($profesors as $profesor)
     <li>
-        {{$profesor->nombre}}
+        <a href="{{route('profesors.buscar', $profesor) }}">
+            {{$profesor->nombre}}
+        </a>
     </li>
     @endforeach
 </ul>

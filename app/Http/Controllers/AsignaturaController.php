@@ -25,15 +25,14 @@ class AsignaturaController extends Controller
         return redirect()->route('asignaturas.listado');
     }
 
-    public function buscar($id){
-
+    public function buscar($id)
+    {
         $asignatura=Asignatura::find($id);
-
         return view('asignaturas.datos_asignatura', compact('asignatura'));
     }
 
-    public function modificar(Asignatura $asignatura){
-
+    public function modificar(Asignatura $asignatura)
+    {
         return view('asignaturas.modificar_asignatura',compact('asignatura'));
     }
 

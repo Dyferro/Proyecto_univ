@@ -1,12 +1,12 @@
 @extends('layout.layout')
 
-@section('title','Insertar Profesor')
+@section('title','Insertar Estudiante')
 
 @section('content')
-<h1> Insertar Profesor</h1>
+<h1> Insertar Estudiante</h1>
 
 <!-- Formulario -->
-<form action="{{route('profesors.guardar')}}" method="POST">
+<form action="{{route('estudiantes.guardar')}}" method="POST">
     @csrf
 
     <label>Nombre completo : </label>
@@ -25,25 +25,25 @@
         <br/>
     @enderror
     <br/>
-    <label>Asignatura : </label>
-    <input type="text" name="asignatura" value="{{old('asignatura')}}">
-    @error('asignatura')
+    <label>Grupo : </label>
+    <input type="text" name="grupo" value="{{old('grupo')}}">
+    @error('grupo')
         <br/>
         *{{$message}}
         <br/>
     @enderror
     <br/>
-    <label>Catedra : </label>
-    <input type="text" name="catedra" value="{{old('catedra')}}">
-    @error('catedra')
-        <br/>
-        *{{$message}}
-        <br/>
-    @enderror
-    <br/>
-    <label>Edad: </label>
+    <label>Edad : </label>
     <input type="number" name="edad" value="{{old('edad')}}">
     @error('edad')
+        <br/>
+        *{{$message}}
+        <br/>
+    @enderror
+    <br/>
+    <label>Nivel: </label>
+    <input type="number" name="nivel" value="{{old('nivel')}}">
+    @error('nivel')
         <br/>
         *{{$message}}
         <br/>
