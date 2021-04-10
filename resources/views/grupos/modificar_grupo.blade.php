@@ -6,7 +6,7 @@
 <h1> Modificar Grupo</h1>
 
 <!-- Formulario -->
-<form action="{{route('grupos.guardarm', $grupo)}}" method="POST">
+<form action="{{route('grupos.update', $grupo)}}" method="POST">
     @csrf
     @method('put')  <!-- Directiva que indica enviar el formulario como un put-->
 

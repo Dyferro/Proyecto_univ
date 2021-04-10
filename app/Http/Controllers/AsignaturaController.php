@@ -9,43 +9,43 @@ use Illuminate\Http\Request;
 class AsignaturaController extends Controller
 {
     //
-    public function mostrar()
+    public function index()
     {
         $asignaturas = Asignatura::all();
         return view('asignaturas.listado_asignatura', compact('asignaturas'));
     }
 
-    public function insertar(){
+    public function create(){
         return view('asignaturas.insertar_asignatura');
     }
 
-    public function guardar(AsignaturaRequest $request)
+    public function store(AsignaturaRequest $request)
     {
         $asignatura = Asignatura::create($request->all());
-        return redirect()->route('asignaturas.listado');
+        return redirect()->route('asignaturas.index');
     }
 
-    public function buscar($id)
+    public function show($id)
     {
         $asignatura=Asignatura::find($id);
         return view('asignaturas.datos_asignatura', compact('asignatura'));
     }
 
-    public function modificar(Asignatura $asignatura)
+    public function edit(Asignatura $asignatura)
     {
         return view('asignaturas.modificar_asignatura',compact('asignatura'));
     }
 
-    public function guardar_modificacion(AsignaturaRequest $request, Asignatura $asignatura)
+    public function update(AsignaturaRequest $request, Asignatura $asignatura)
     {
        $asignatura->update($request->all());
-       return redirect()->route('asignaturas.buscar', $asignatura);
+       return redirect()->route('asignaturas.show', $asignatura);
     }
 
-    public function eliminar(Asignatura $asignatura)
+    public function destroy(Asignatura $asignatura)
     {
         $asignatura->delete();
-        return redirect()->route('asignaturas.listado');
+        return redirect()->route('asignaturas.index');
     }
 
 

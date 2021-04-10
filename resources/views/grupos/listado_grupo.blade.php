@@ -7,7 +7,7 @@
 <ul>
     @foreach ($grupos as $grupo)
     <li>
-        <a href="{{route('grupos.buscar', $grupo) }}">
+        <a href="{{route('grupos.show', $grupo) }}">
             {{$grupo->nombregrupo}}
         </a>
     </li>
@@ -16,5 +16,5 @@
 </ul>
 
 <br/>
-<a href="{{ route('grupos.insertar') }}"> Insertar nuevo grupo</a>
+<a href="{{ route('grupos.create') }}"> Insertar nuevo grupo</a>
 @endsection

@@ -13,11 +13,11 @@
 </ul>
 
 
-<a href="{{ route('profesors.listado') }}"> Ir al listado</a>
+<a href="{{ route('profesors.index') }}"> Ir al listado</a>
 <br/>
-<a href="{{ route('profesors.modificar', $profesor ) }}"> Modificar </a>
+<a href="{{ route('profesors.edit', $profesor ) }}"> Modificar </a>
 <br/>
-<form action="{{ route('profesors.eliminar', $profesor ) }}" method="POST">
+<form action="{{ route('profesors.destroy', $profesor ) }}" method="POST">
     @csrf
     @method('delete')
     <button type="submit">

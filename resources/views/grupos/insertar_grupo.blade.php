@@ -6,7 +6,7 @@
 <h1> Insertar Grupo</h1>
 
 <!-- Formulario -->
-<form action="{{route('grupos.guardar')}}" method="POST">
+<form action="{{route('grupos.store')}}" method="POST">
     @csrf
 
     <label>Nombre del grupo : </label>

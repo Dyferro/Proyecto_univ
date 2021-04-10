@@ -7,7 +7,7 @@
 <ul>
     @foreach ($estudiantes as $estudiante)
     <li>
-        <a href="{{route('estudiantes.buscar', $estudiante) }}">
+        <a href="{{route('estudiantes.show', $estudiante) }}">
             {{$estudiante->nombre}}
         </a>
     </li>
@@ -17,5 +17,5 @@
 </ul>
 
 <br/>
-<a href="{{ route('estudiantes.insertar') }}"> Insertar nuevo Estudiante</a>
+<a href="{{ route('estudiantes.create') }}"> Insertar nuevo Estudiante</a>
 @endsection

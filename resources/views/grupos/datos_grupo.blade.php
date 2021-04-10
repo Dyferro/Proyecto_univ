@@ -11,11 +11,11 @@
 </ul>
 
 
-<a href="{{ route('grupos.listado') }}"> Ir al listado</a>
+<a href="{{ route('grupos.index') }}"> Ir al listado</a>
 <br/>
-<a href="{{ route('grupos.modificar', $grupo ) }}"> Modificar </a>
+<a href="{{ route('grupos.edit', $grupo ) }}"> Modificar </a>
 <br/>
-<form action="{{ route('grupos.eliminar', $grupo) }}" method="POST">
+<form action="{{ route('grupos.destroy', $grupo) }}" method="POST">
     @csrf
     @method('delete')
     <button type="submit">

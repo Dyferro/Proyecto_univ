@@ -6,7 +6,7 @@
 <h1> Modificar Profesor</h1>
 
 <!-- Formulario -->
-<form action="{{route('profesors.guardarm', $profesor)}}" method="POST">
+<form action="{{route('profesors.update', $profesor)}}" method="POST">
     @csrf
     @method('put')  <!-- Directiva que indica enviar el formulario como un put-->
 

@@ -6,7 +6,7 @@
 <h1> Insertar Asignatura</h1>
 
 <!-- Formulario -->
-<form action="{{route('asignaturas.guardar')}}" method="POST">
+<form action="{{route('asignaturas.store')}}" method="POST">
     @csrf
 
     <label>Nombre de la Asignatura : </label>

@@ -6,15 +6,15 @@
 <h1> Bienvenido a la pagina principal </h1>
 
 <br/>
-<a href="{{route('asignaturas.listado')}}">Ver listado de asignaturas</a>
+<a href="{{route('asignaturas.index')}}">Ver listado de asignaturas</a>
 
 <br/>
-<a href="{{route('profesors.listado')}}">Ver listado de profesores</a>
+<a href="{{route('profesors.index')}}">Ver listado de profesores</a>
 
 <br/>
-<a href="{{route('estudiantes.listado')}}">Ver listado de estudiantes</a>
+<a href="{{route('estudiantes.index')}}">Ver listado de estudiantes</a>
 
 <br/>
-<a href="{{route('grupos.listado')}}">Ver listado de grupos</a>
+<a href="{{route('grupos.index')}}">Ver listado de grupos</a>
 @endsection
 

@@ -6,7 +6,7 @@
 <h1> Modificar Asignatura</h1>
 
 <!-- Formulario -->
-<form action="{{route('asignaturas.guardarm', $asignatura)}}" method="POST">
+<form action="{{route('asignaturas.update', $asignatura)}}" method="POST">
 
     @csrf
 

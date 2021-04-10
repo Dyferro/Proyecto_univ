@@ -6,7 +6,7 @@
 <h1> Insertar Profesor</h1>
 
 <!-- Formulario -->
-<form action="{{route('profesors.guardar')}}" method="POST">
+<form action="{{route('profesors.store')}}" method="POST">
     @csrf
 
     <label>Nombre completo : </label>
