@@ -15,4 +15,9 @@ class Profesor extends Model
         'catedra',
         'edad',
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

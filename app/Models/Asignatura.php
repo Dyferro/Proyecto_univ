@@ -14,4 +14,9 @@ class Asignatura extends Model
         'duracionhoras',
         'nivel'
     ];
+
+   public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

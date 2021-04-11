@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Asignatura;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AsignaturaFactory extends Factory
@@ -19,11 +20,15 @@ class AsignaturaFactory extends Factory
      *
      * @return array
      */
+
+
     public function definition()
     {
+        $name=$this->faker->word();
         return [
             //Creando mis datos de prueba
-            'nombre' => $this->faker->company(),
+            'nombre' => $name,
+            'slug'=> Str::slug($name,'-'),
             'descripcion' => $this->faker->sentence(),
             'duracionhoras' => $this->faker->numberBetween($min = 100, $max = 250),
             'nivel' => $this->faker->numberBetween($min = 1, $max = 5),

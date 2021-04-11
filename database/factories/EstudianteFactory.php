@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Estudiante;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class EstudianteFactory extends Factory
@@ -21,9 +22,11 @@ class EstudianteFactory extends Factory
      */
     public function definition()
     {
+        $name=$this->faker->name();
         return [
             //
-            'nombre' => $this->faker->name(),
+            'nombre' => $name,
+            'slug'=> Str::slug($name,'-'),
             'direccion'=> $this->faker->address(),
             'grupo'=> $this->faker->numerify('Gr ###'),
             'edad'=> $this->faker->numberBetween($min = 18, $max = 25),

@@ -15,4 +15,9 @@ class Estudiante extends Model
         'edad',
         'nivel',
     ];
+
+   public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

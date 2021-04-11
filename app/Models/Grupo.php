@@ -13,4 +13,9 @@ class Grupo extends Model
         'totalestudiantes',
         'nivel',
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

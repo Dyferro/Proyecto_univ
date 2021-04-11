@@ -25,10 +25,8 @@ class ProfesorController extends Controller
         return redirect()->route('profesors.index');
     }
 
-    public function show($id)
+    public function show(Profesor $profesor)
     {
-        $profesor = Profesor::find($id);
-        //return $profesor;
         return view('profesores.datos_profesor', compact('profesor'));
     }
 

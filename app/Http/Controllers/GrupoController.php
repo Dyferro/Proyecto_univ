@@ -25,9 +25,8 @@ class GrupoController extends Controller
         return redirect()->route('grupos.index');
     }
 
-    public function show($id)
+    public function show(Grupo $grupo)
     {
-        $grupo = Grupo::find($id);
         return view('grupos.datos_grupo', compact('grupo'));
     }
 

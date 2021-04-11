@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Profesor;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ProfesorFactory extends Factory
@@ -21,9 +22,11 @@ class ProfesorFactory extends Factory
      */
     public function definition()
     {
+        $name=$this->faker->name();
         return [
             //
-            'nombre' => $this->faker->name(),
+            'nombre' => $name,
+            'slug'=> Str::slug($name,'-'),
             'direccion'=> $this->faker->address(),
             'asignatura'=> $this->faker->company(),
             'catedra'=> $this->faker->word(),

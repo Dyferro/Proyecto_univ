@@ -25,9 +25,8 @@ class AsignaturaController extends Controller
         return redirect()->route('asignaturas.index');
     }
 
-    public function show($id)
+    public function show(Asignatura $asignatura)
     {
-        $asignatura=Asignatura::find($id);
         return view('asignaturas.datos_asignatura', compact('asignatura'));
     }
 

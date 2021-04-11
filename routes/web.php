@@ -31,3 +31,5 @@ Route::resource('estudiantes', EstudianteController::class);
 // Rutas para los Grupos
 Route::resource('grupos', GrupoController::class);
 
+//Ruta para contenido estatico
+Route::view('plan-estudios', 'plan-estudios')->name('plan-estudios');

@@ -26,9 +26,8 @@ class EstudianteController extends Controller
         return redirect()->route('estudiantes.index');
     }
 
-    public function show($id)
+    public function show(Estudiante $estudiante)
     {
-        $estudiante = Estudiante::find($id);
         return view('estudiantes.datos_estudiante', compact('estudiante'));
     }
 
