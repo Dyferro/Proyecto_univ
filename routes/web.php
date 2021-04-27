@@ -1,11 +1,15 @@
 <?php
 
 use App\Http\Controllers\AsignaturaController;
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\GrupoController;
 use App\Http\Controllers\ProfesorController;
 use App\Http\Controllers\HomeController;
+use App\Mail\ContactoMailable;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +36,10 @@ Route::resource('estudiantes', EstudianteController::class);
 Route::resource('grupos', GrupoController::class);
 
 //Ruta para contenido estatico
-Route::view('plan-estudios', 'plan-estudios')->name('plan-estudios');
+Route::view('plan-estudios', 'plan-estudios')->name('plan-estudios');// llamar directamente a una vista
+
+//Ruta para enviar correo electronico
+Route::get('contacto', [ContactoController::class,'index'])->name('contacto.index');
+
+//Ruta que envia los correos de la pagina contacto
+Route::post('contacto',[ContactoController::class,'store'])->name('contacto.store');

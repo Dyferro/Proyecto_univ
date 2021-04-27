@@ -15,8 +15,6 @@ class Asignatura extends Model
         'nivel'
     ];
 
-   public function getRouteKeyName()
-    {
-        return 'slug';
-    }
+
+
 }

@@ -16,8 +16,5 @@ class Profesor extends Model
         'edad',
     ];
 
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
+
 }

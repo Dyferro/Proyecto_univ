@@ -14,8 +14,6 @@ class Grupo extends Model
         'nivel',
     ];
 
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
+
+
 }

@@ -26,7 +26,7 @@ class EstudianteFactory extends Factory
         return [
             //
             'nombre' => $name,
-            'slug'=> Str::slug($name,'-'),
+            //'slug'=> Str::slug($name,'-'),
             'direccion'=> $this->faker->address(),
             'grupo'=> $this->faker->numerify('Gr ###'),
             'edad'=> $this->faker->numberBetween($min = 18, $max = 25),

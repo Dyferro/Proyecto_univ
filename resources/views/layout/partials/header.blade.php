@@ -15,13 +15,16 @@
                         <a href="{{route('asignaturas.index')}}" class="{{request()->routeIs('asignaturas.*') ? 'active' : ''}}">Asignaturas</a>
                     </li>
                     <li>
-                        <a href="{{route('grupos.index')}}">Grupos</a>
+                        <a href="{{route('grupos.index')}}" class="{{request()->routeIs('grupos.*') ? 'active' : ''}}">Grupos</a>
                     </li>
                     <li>
-                        <a href="{{ route('plan-estudios') }}">Plan de estudios</a>
+                        <a href="{{ route('plan-estudios') }}" class="{{request()->routeIs('plan-estudios') ? 'active' : ''}}">Plan de estudios</a>
                     </li>
                     <li>
-                        <a href="{{route('profesors.index')}}">Profesores</a>
+                        <a href="{{route('profesors.index')}}" class="{{request()->routeIs('profesors.*') ? 'active' : ''}}">Profesores</a>
+                    </li>
+                    <li>
+                        <a href="{{route('contacto.index')}}" class="{{request()->routeIs('contacto.*') ? 'active' : ''}}">Contacto</a>
                     </li>
                 </ul>
             </nav>

@@ -16,7 +16,7 @@ class CreateProfesorsTable extends Migration
         Schema::create('profesors', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('slug');// para url amigables
+            //$table->string('slug');// para url amigables
             $table->string('direccion');
             $table->string('asignatura');
             $table->string('catedra');

@@ -26,7 +26,7 @@ class ProfesorFactory extends Factory
         return [
             //
             'nombre' => $name,
-            'slug'=> Str::slug($name,'-'),
+            //'slug'=> Str::slug($name,'-'),
             'direccion'=> $this->faker->address(),
             'asignatura'=> $this->faker->company(),
             'catedra'=> $this->faker->word(),

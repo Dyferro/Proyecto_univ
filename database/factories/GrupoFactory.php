@@ -26,7 +26,7 @@ class GrupoFactory extends Factory
         return [
             //
             'nombregrupo'=> $name,
-            'slug'=> Str::slug($name,'-'),
+            //'slug'=> Str::slug($name,'-'),
             'totalestudiantes'=> $this->faker->numberBetween($min = 30, $max = 35),
             'nivel'=> $this->faker->numberBetween($min = 1, $max = 5),
         ];
