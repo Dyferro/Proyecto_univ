@@ -43,3 +43,7 @@ Route::get('contacto', [ContactoController::class,'index'])->name('contacto.inde
 
 //Ruta que envia los correos de la pagina contacto
 Route::post('contacto',[ContactoController::class,'store'])->name('contacto.store');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
