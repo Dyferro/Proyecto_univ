@@ -21,7 +21,7 @@
     <div class="container mx-auto">
         <div class="grid gap-y-2">
              <!--header-->
-             @include('layout.partials.header')
+             @include('components.header')
 
             <!--cont-->
             <div class="grid grid-cols-4 gap-x-4 gap-y-1">
@@ -32,7 +32,7 @@
                 <div class="bg-green-400">d</div>
             </div>
             <!--footer-->
-            @include('layout.partials.footer')
+            @include('components.footer')
 
         </div>
 

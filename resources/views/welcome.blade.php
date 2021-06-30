@@ -7,7 +7,7 @@
 
 <br/>
 
-<a href="{{route('estudiantes.index')}}">Ver listado de estudiantes</a>
+
 
 
 @endsection
