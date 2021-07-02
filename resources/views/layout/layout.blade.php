@@ -16,10 +16,10 @@
     </style>
 </head>
 <body>
-
-
     <div class="container mx-auto">
         <div class="grid gap-y-2">
+             <!--banner-->
+             @include('components.banner')
              <!--header-->
              @include('components.header')
 

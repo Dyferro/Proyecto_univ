@@ -22,7 +22,7 @@ class ProfesorFactory extends Factory
      */
     public function definition()
     {
-        $name=$this->faker->name();
+        $name='Prof. '.$this->faker->name();
         return [
             //
             'nombre' => $name,

@@ -29,8 +29,8 @@ class AsignaturaRequest extends FormRequest
             //
             'nombre'=>'required|max:12',
             'descripcion'=>'required|max:20',
-            'duracionhoras'=>'required|max:3',
-            'nivel'=>'required|max:1',
+            'duracionhoras'=>'required|integer|between:100,250',
+            'nivel'=>'required|integer|between:1,5',
         ];
     }
 
