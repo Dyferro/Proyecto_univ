@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Profesor;
+use App\Models\Asignatura;
+use App\Models\Grupo;
 use App\Http\Requests\ProfesorRequest;
 use Illuminate\Http\Request;
 
@@ -16,7 +19,9 @@ class ProfesorController extends Controller
 
     public function create()
     {
-        return view('profesores.insertar_profesor');
+        $asignaturas = Asignatura::all();
+        $grupos = Grupo::all();
+        return view('profesores.insertar_profesor', compact('asignaturas','grupos'));
     }
 
     public function store(ProfesorRequest $request)

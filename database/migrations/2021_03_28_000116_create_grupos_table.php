@@ -18,6 +18,7 @@ class CreateGruposTable extends Migration
             $table->string('nombregrupo');
             //$table->string('slug');
             $table->integer('totalestudiantes');
+            $table->string('profesorguia');
             $table->integer('nivel');
             $table->timestamps();
         });

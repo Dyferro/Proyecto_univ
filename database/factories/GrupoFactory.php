@@ -28,6 +28,7 @@ class GrupoFactory extends Factory
             'nombregrupo'=> $name,
             //'slug'=> Str::slug($name,'-'),
             'totalestudiantes'=> $this->faker->numberBetween($min = 30, $max = 35),
+            'profesorguia'=>'Prof. '.$this->faker->name(),
             'nivel'=> $this->faker->numberBetween($min = 1, $max = 5),
         ];
     }

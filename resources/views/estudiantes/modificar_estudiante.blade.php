@@ -41,14 +41,7 @@
         *{{$message}}
         <br/>
     @enderror
-    <br/>
-    <label>Nivel: </label>
-    <input type="number" name="nivel" value="{{old('nivel',  $estudiante->nivel)}}">
-    @error('nivel')
-        <br/>
-        *{{$message}}
-        <br/>
-    @enderror
+
     <br/>
     <br/>
     <button type="submit">Modificar</button>

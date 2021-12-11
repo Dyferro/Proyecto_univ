@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\EstudianteRequest;
 use App\Models\Estudiante;
+use App\Models\Grupo;
 use Illuminate\Http\Request;
 
 class EstudianteController extends Controller
@@ -17,7 +18,8 @@ class EstudianteController extends Controller
 
     public function create()
     {
-        return view('estudiantes.insertar_estudiante');
+        $grupos = Grupo::all();
+        return view('estudiantes.insertar_estudiante', compact('grupos'));
     }
 
     public function store(EstudianteRequest $request)
@@ -28,7 +30,8 @@ class EstudianteController extends Controller
 
     public function show(Estudiante $estudiante)
     {
-        return view('estudiantes.datos_estudiante', compact('estudiante'));
+        $grupo = Grupo::where('nombregrupo', $estudiante->grupo)->first();
+        return view('estudiantes.datos_estudiante', compact('estudiante','grupo'));
     }
 
     public function edit(Estudiante $estudiante)

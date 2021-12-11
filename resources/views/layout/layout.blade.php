@@ -14,7 +14,9 @@
             font-weight: bold;
         }
     </style>
+
 </head>
+
 <body>
     <div class="container mx-auto">
         <div class="grid gap-y-2">
@@ -25,13 +27,18 @@
 
             <!--cont-->
             <div class="grid grid-cols-4 gap-x-4 gap-y-1">
-                <div class="bg-green-100 col-span-2">
+                <div class="bg-white col-span-2">
                     @yield('content')
+                   
+                    
                 </div>
+
                 <div class="bg-green-300">c</div>
                 <div class="bg-green-400">d</div>
             </div>
+
             <!--footer-->
+            @include('components.prefooter')
             @include('components.footer')
 
         </div>
@@ -41,10 +48,12 @@
     </div>
 
 
-
+    @yield('javascript')
 
 
     <!--scripts-->
+
+
 </body>
 </html>
 

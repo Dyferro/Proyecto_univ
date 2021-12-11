@@ -19,6 +19,8 @@ class CreateProfesorsTable extends Migration
             //$table->string('slug');// para url amigables
             $table->string('direccion');
             $table->string('asignatura');
+            $table->boolean('esguia');
+            $table->string('grupo');
             $table->string('catedra');
             $table->integer('edad');
             $table->timestamps();

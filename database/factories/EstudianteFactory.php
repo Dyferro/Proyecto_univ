@@ -30,7 +30,7 @@ class EstudianteFactory extends Factory
             'direccion'=> $this->faker->address(),
             'grupo'=> $this->faker->numerify('Gr ###'),
             'edad'=> $this->faker->numberBetween($min = 18, $max = 25),
-            'nivel'=> $this->faker->numberBetween($min = 1, $max = 5),
+
         ];
     }
 }

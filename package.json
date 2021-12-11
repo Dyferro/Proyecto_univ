@@ -20,5 +20,8 @@
         "postcss": "^8.2.8",
         "postcss-import": "^14.0.1",
         "tailwindcss": "^2.0.1"
+    },
+    "dependencies": {
+        "@iconscout/unicons": "^4.0.0"
     }
 }

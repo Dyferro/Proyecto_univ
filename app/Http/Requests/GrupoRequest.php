@@ -27,7 +27,8 @@ class GrupoRequest extends FormRequest
             //
             'nombregrupo'=>'required|max:6',
             'totalestudiantes'=>'required|max:2',
-            'nivel'=>'required|max:1',
+            'nivel'=>'required|integer|between:1,5',
+            'profesorguia'=>'required|max:30'
         ];
     }
 

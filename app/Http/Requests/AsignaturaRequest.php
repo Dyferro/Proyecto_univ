@@ -28,7 +28,7 @@ class AsignaturaRequest extends FormRequest
         return [
             //
             'nombre'=>'required|max:12',
-            'descripcion'=>'required|max:20',
+            'descripcion'=>'required|max:50',
             'duracionhoras'=>'required|integer|between:100,250',
             'nivel'=>'required|integer|between:1,5',
         ];

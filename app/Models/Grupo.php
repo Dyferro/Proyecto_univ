@@ -11,6 +11,7 @@ class Grupo extends Model
     protected $fillable=[
         'nombregrupo',
         'totalestudiantes',
+        'profesorguia',
         'nivel',
     ];
 

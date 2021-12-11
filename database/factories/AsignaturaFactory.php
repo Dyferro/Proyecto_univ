@@ -24,10 +24,10 @@ class AsignaturaFactory extends Factory
 
     public function definition()
     {
-        $name=$this->faker->word();
+
         return [
             //Creando mis datos de prueba
-            'nombre' => $name,
+            'nombre' => $this->faker->word(),
             //'slug'=> Str::slug($name,'-'),
             'descripcion' => $this->faker->sentence(),
             'duracionhoras' => $this->faker->numberBetween($min = 100, $max = 250),

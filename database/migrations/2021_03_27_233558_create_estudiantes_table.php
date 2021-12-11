@@ -20,7 +20,7 @@ class CreateEstudiantesTable extends Migration
             $table->string('direccion');
             $table->string('grupo');
             $table->integer('edad');
-            $table->integer('nivel');
+
             $table->timestamps();
         });
     }

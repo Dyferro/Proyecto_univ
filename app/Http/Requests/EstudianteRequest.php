@@ -25,11 +25,11 @@ class EstudianteRequest extends FormRequest
     {
         return [
             //
-            'nombre'=>'required|max:12',
+            'nombre'=>'required|max:30',
             'direccion'=>'required|max:30',
             'grupo'=>'required|max:6',
             'edad'=>'required|max:2',
-            'nivel'=>'required|max:2',
+
         ];
     }
 }

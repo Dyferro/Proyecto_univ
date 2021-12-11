@@ -22,15 +22,20 @@ class ProfesorFactory extends Factory
      */
     public function definition()
     {
-        $name='Prof. '.$this->faker->name();
+        $var=$this->faker->boolean();
+        $grup="-";
+        if($var){
+            $grup=$this->faker->numerify('Gr ###');
+        }
         return [
             //
-            'nombre' => $name,
-            //'slug'=> Str::slug($name,'-'),
+            'nombre' =>'Prof. '.$this->faker->name(),
             'direccion'=> $this->faker->address(),
-            'asignatura'=> $this->faker->company(),
+            'asignatura'=> $this->faker->word(),
+            'esguia'=>$var,
+            'grupo'=>$grup,
             'catedra'=> $this->faker->word(),
-            'edad'=> $this->faker->numberBetween($min = 18, $max = 25),
+            'edad'=> $this->faker->numberBetween($min = 18, $max = 35),
         ];
     }
 }

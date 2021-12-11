@@ -12,6 +12,8 @@ class Profesor extends Model
         'nombre',
         'direccion',
         'asignatura',
+        'esguia',
+        'grupo',
         'catedra',
         'edad',
     ];

@@ -13,7 +13,7 @@ class Estudiante extends Model
         'direccion',
         'grupo',
         'edad',
-        'nivel',
+        
     ];
 
 
